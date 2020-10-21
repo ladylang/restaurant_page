@@ -1,1 +1,1 @@
-# restaurant_page
+Resturant site from the Odin Project curriculum. 
