@@ -1,14 +1,9 @@
-// make divs
+// main page of the resturant page 
+// append all sections onto the content div 
 
 function MainPage() {
-    const topBanner = document.createElement('div');
-    const topBannerId = document.createAttribute('id');
-    topBannerId.value = "topBanner";
-    topBanner.setAttributeNode(topBannerId);
-    topBanner.innerHTML = "Top";
-    topBanner.style.alignContent = "center";
 
-    console.log('load topBanner');
+    console.log('Home Page');
 }
 
 export {MainPage};
