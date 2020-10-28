@@ -1,6 +1,7 @@
 // loading everything onto the mainpage via modules
 // tabs - home, menu, and contacts 
 import {MainPage} from './MainPage.js';
+import "./resturant_stylesheet.css";
 
 
 const body = document.getElementById('content');
@@ -20,7 +21,6 @@ class navbarTab {
         // div for each button in navbar
         this.tabDiv = document.createElement("DIV");
         this.tabDiv.setAttribute("id", tab);
-        this.tabDiv.style.backgroundColor = '#4287f5';
 
         // button with tab info 
         this.tabBtn = document.createElement("BUTTON");
