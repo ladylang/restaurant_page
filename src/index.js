@@ -1,6 +1,8 @@
 // loading everything onto the mainpage via modules
 // tabs - home, menu, and contacts 
-import {MainPage} from './MainPage.js';
+import {HomePage} from './MainPage.js';
+import {ContactsPage} from './ContactsPage.js';
+import {MenuPage} from './MenuPage.js';
 import "./resturant_stylesheet.css";
 
 
@@ -16,6 +18,10 @@ const navbarDiv = document.createElement("DIV");
 navbarDiv.setAttribute("id", "navbarDiv");
 navbarDiv.style.display = "inline-block";
 
+// create main div
+const mainDiv = document.createElement("DIV");
+mainDiv.setAttribute("id", "mainDiv");
+
 class navbarTab {
     constructor (tab) {
         // div for each button in navbar
@@ -28,12 +34,14 @@ class navbarTab {
         
         // added navbar logic to each button
         this.tabBtn.addEventListener("click", () => {
+            mainDiv.removeChild(mainDiv.firstChild);
+
             if (tab === 'Home') {
-                MainPage()
+                mainDiv.appendChild(HomePage());
             } else if (tab === 'Contacts') {
-                console.log("loaded contacts")
+                mainDiv.appendChild(ContactsPage());
             } else if (tab === 'Menu') {
-                console.log("loaded Menu")
+                mainDiv.appendChild(MenuPage());
             }
         });
         
@@ -41,7 +49,9 @@ class navbarTab {
         this.tabDiv.appendChild(this.tabBtn);
         navbarDiv.appendChild(this.tabDiv);
     }
+
 };
+
 
 // create navbar buttons
 let Home = new navbarTab('Home');
@@ -51,8 +61,8 @@ let Menu = new navbarTab('Menu');
 // append all new divs onto the body
 body.appendChild(resturantNameDiv);
 body.appendChild(navbarDiv);
+body.appendChild(mainDiv);
+mainDiv.appendChild(HomePage());
 
 
-// call mainpage on load
-MainPage();
 console.log("body loaded");
