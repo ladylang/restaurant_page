@@ -11,7 +11,7 @@ function HomePage() {
 
 
     const aboutP = document.createElement("P");
-    aboutP.textContent = "Tandoor Grill is an Indian resturant known for its modern interpretation of classic dishes.";
+    aboutP.textContent = "We are known for our authantic flavors and quality ingrediants.";
 
     titleDiv.appendChild(title);
     titleDiv.appendChild(aboutP);

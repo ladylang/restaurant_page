@@ -11,7 +11,7 @@ const body = document.getElementById('content');
 // resturant name 
 const resturantNameDiv = document.createElement("DIV");
 resturantNameDiv.setAttribute("id", "resturantName");
-resturantNameDiv.innerHTML = 'Tandoor Grill';
+resturantNameDiv.innerHTML = 'Indian Grill';
 
 // build navbar
 const navbarDiv = document.createElement("DIV");

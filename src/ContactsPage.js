@@ -11,7 +11,7 @@ function ContactsPage() {
 
 
     const aboutP = document.createElement("P");
-    aboutP.textContent = "Phone number: 301-362-4222";
+    aboutP.textContent = "Phone number: 301-000-0000";
 
     titleDiv.appendChild(title);
     titleDiv.appendChild(aboutP);
